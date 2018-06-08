@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.container
+		{
+			text-align: center;
+			border: 10px solid black;
+			height: 450px;
+			width: 1000px;
+			padding-top: 5px;
+			margin-top: 50px;
+			padding-bottom: 20px;
+					}
+	#xy
+		{
+			color: navy;
+			font-family: -webkit-pictograph;
+			font-style: italic;
+		}
+		button{
+			font-size: 15px;
+		}
+	
+		
+		#myText{
+			font-family: verdana;
+			font-weight: bold;
+			border-color: red;
+			background-color:#f7b9f8;
+		    
+			width: 500px;
+			
+		}
+
+		/*
+		/*#status	{
+			background-color: blue;
+			height: 30px;
+			width: 30px;
+			color: white;
+
+		}
+		#pg{
+			font-family: verdana;
+			font-weight: bold;
+
+		}*/
+	</style>
+	<title></title>
+	
+	
+
+   
+<script type="text/javascript">
+	var myVar;
+function myFunction() {
+    document.getElementById("myText").disabled = false;
+  var nm = 61;//time 
+  function myLoop () {
+  setTimeout(function () {
+      nm--;
+  if (nm <61 && nm>-1) {
+  if(nm==0){
+document.getElementById("myText").disabled = true;
+document.getElementById("start").disabled = true;
+document.getElementById("time").innerHTML =nm;
+document.body.onkeyup = function(e) {
+if( e.keyCode == 32 ) {
+e.preventDefault();
+}
+}
+}
+document.getElementById("time").innerHTML =nm;
+     myLoop();
+  }
+}, 1000)
+  }
+myLoop();
+}//time show function
+</script>
+ <script type="module">
+    var hits = 0;
+  var sum=1;
+var hitElement = document.querySelector( '.hits' );
+document.getElementById("myText").onkeyup = function(e) {
+  myVar = setTimeout(function(){
+ }, 60000);
+if( e.keyCode == 32 ) {
+  addHit();
+  // myVar = setTimeout(function(){ alert("Time Over"); }, 5000);
+}
+}
+var addHit = function() {
+hits++;
+renderHits();
+}
+var char;
+var renderHits = function() {
+hitElement.innerHTML = hits;
+    var str =["This ","essay ", "starts ", "off ", "very ", "easily ", "and ", "i ", "hope ", "everyone ", "can ", "get ", "good ", "results ", "on ", "this ", "due ", "to ", "not ", "having ", "to ", 	"type ", "everything ", "correctly ", "and ", "how ", "it ", "should ", "be. ", "So ", "here " ,"is ","a ","text ","for ","those ","people ", "who ", "cannot ", "type ", "the ", "best ", "at ", "typing ", "correctly ", "now ",
+  "i ", "will ", "end ", "this ", "essay ", "so ", "you ", "can ", "see ", "your ", "results ", "i ", "hope ", "you ", "got ", "a ","nice ","performance. "];
+    var i=hits-1;
+      var char=document.getElementById("myText").value;
+	var b=document.getElementById("myText");
+	b.value="";
+var a=char;
+var c=str[i];
+if (a.localeCompare(c)) {
+document.getElementById(i).style.color ="red";
+}
+else{
+document.getElementById(i).style.color ="#05d605";
+document.getElementById("sc").innerHTML =sum*1;
+sum++;
+}
+}
+</script>
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script type="text/javascript">
+	function reload(){
+    location.reload();
+}
+</script>
+<script type="text/javascript">
+	function show(){
+		alert("good performance");
+	}
+</script>
+<!-- <script type="text/javascript">
+function myFunction() {
+    document.getElementById("myText").disabled = false;
+}
+
+</script>-->
+</head> 
+
+<body>
+	<center>
+<div class="container">
+
+    <div id="activity" align="center"></div>
+<div id="abc"><h1 id="xy"> Welcome To The Typing Master</h1></div>
+
+ <center><a href="#" data-toggle="tooltip" title="ready"><button type="button" class="btn btn-primary" onclick="myFunction()" id="start">Typing Start</button></a></center>
+<!-- <button onclick="mydemo()" class="btn btn-primary"><b>Start Typing</b></button><br>
+ -->
+<!-- <script type="text/javascript">
+	var prgp=["Saab" "Volvo" "BMW" "Women" "empowerment" "has" "become" "the" "buzzword" "today" "with" "women" "working" "alongside" "men" "in" "all" "spheres."];
+	var splt=prgp.split(" ");
+document.getElementById("dg").innerHTML=prgp;
+</script> -->
+<center>  <h3 id="show">
+<span id="0" h>This</span>
+<span id="1" >essay</span>
+<span id="2" >starts</span>
+<span id="3" >off</span> 
+<span id="4" >very</span>
+<span id="5" >easily</span> 
+<span id="6">and</span> 
+<span id="7">i</span>
+<span id="8">hope</span>
+<span id="9">everyone</span>
+<span id="10">can</span> 
+<span id="11"> get</span> 
+<span id="12"> good</span> 
+<span id="13"> results</span> 
+<span id="14"> on</span> 
+<span id="15"> this</span> 
+<span id="16"> due</span> 
+<span id="17"> to</span> 
+<span id="18"> not</span> 
+<span id="19"> having</span> 
+<span id="20"> to</span> 
+<span id="21"> type</span> 
+<span id="22"> everything</span> 
+<span id="23"> correctly</span> 
+<span id="24">and</span> 
+<span id="25"> how</span> 
+<span id="26"> it</span>
+
+   
+<span id="27"> should</span> 
+<span id="28"> be.</span>
+<span id="29"> so</span>
+<span id="30"> here</span>
+<span id="31">is</span>
+<span id="32"> a</span>
+<span id="33"> text</span>
+<span id="34"> for</span>
+<span id="35"> those</span>
+<span id="36"> people</span>
+<span id="37"> who</span>
+<span id="38"> cannot</span>
+<span id="39"> type</span>
+<span id="40"> the</span>
+<span id="41"> best</span>
+<span id="42"> at</span>
+<span id="43"> typing</span>
+<span id="44"> correctly</span>
+<span id="45"> now</span>
+<span id="46"> i</span>
+<span id="57">will</span>
+<span id="48">end </span>
+<span id="49"> this</span>
+<span id="50"> essay</span>
+<span id="51"> so</span>
+<span id="52">you</span>
+<span id="53"> can</span>
+<span id="54"> see</span>
+<span id="55"> your</span>
+<span id="56"> results</span>
+<span id="57">i</span>
+<span id="58"> hope</span>
+<span id="59"> you</span>
+<span id="60"> got</span>
+<span id="61"> a</span>
+<span id="62"> nice</span>
+<span id="63"> percormance.</span>
+
+</h3></center>
+<br>
+<center>
+<input type="text" id="myText" class="form-control" onkeypress="my(event)" disabled>
+</center>
+<br>
+<button class="btn btn-primary" id="zz" ondblclick="show()"><b>Submit</b></button>
+  <button  id="time" type="button"  class="btn btn-warning btn-md" style="    height: 34px;"></button>
+
+<button id="myid" onclick="reload()" type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-time"></span> Try Again</button></center>	
+<br>
+	<h1 style=" margin-left:622px; margin-top:-95px;">Score:- </h1>
+  <h1 style="margin-left: 740px;
+    margin-top: -46px;color:green" id="sc" ></h1>
+  <h1 id="counter" hidden><span class="hits" >0</span> times.</h1>
+
+
+</div>
+</body>
+</html>
+
+
+
+<!--
+var selectedFacils = [];
+var selectedExcludeFacils = [];
+$("#selectFacilParams_chosen").find(".search-choice").each(function () {
+    var elem = jQuery(this).text();
+    selectedFacils.push(elem);
+});
+$("#selectFacilParamsExclude_chosen").find(".search-choice").each(function () {
+    var elem = jQuery(this).text();
+    selectedExcludeFacils.push(elem);
+});-->
